@@ -19,7 +19,7 @@ for (digit3 = 0; digit3 < 10; digit3++)
 putchar((digit1 % 10) + '0');
 putchar((digit2 % 10) + '0');
 putchar((digit3 % 10) + '0');
-if (digit1 == 9 && digit2 == 9 && digit3 == 9)
+if (digit1 == 9 && digit2 == 9 || digit3 == 9)
 continue;
 putchar(',');
 putchar(' ');
