@@ -1,12 +1,19 @@
-#include <unistd.h>
+#include "main.h"
 /**
-* main-Entry point
-*
-* return: 0 if successful
-*/
-
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-write(1, "_putchar\n", 10);
+char *pc = "_putchar";
+
+while (*pc)
+{
+_putchar(*pc);
+pc++;
+}
+_putchar('\n');
+
 return (0);
 }
