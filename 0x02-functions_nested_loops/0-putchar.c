@@ -1,17 +1,17 @@
 #include "main.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* main - Entry point
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-char *pc = "_putchar";
+char *sh = "_putchar";
 
-while (*pc)
+while (*sh)
 {
-_putchar(*pc);
-pc++;
+_putchar(*sh);
+sh++;
 }
 _putchar('\n');
 
