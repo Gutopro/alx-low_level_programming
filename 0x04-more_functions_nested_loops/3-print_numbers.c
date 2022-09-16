@@ -1,14 +1,18 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
-* print_numbers	-entry
+*print_numbers - entry point
+*
+*Returns: 0 if successful
 */
-
 void print_numbers(void)
+
 {
-char item;
-
-for (item = '0'; item <= '9'; item++)
-_putchar(item);
-
-_putchar('\n');
+int n;
+for (n = 0; n < 10; n++)
+{
+putchar(n);
+}
+putchar(10);
+}
