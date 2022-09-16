@@ -1,17 +1,14 @@
-include "main.h"
+#include "main.h"
+
 /**
-* print_numbers - entry
-*
-* Return: 0
-**/
+* print_numbers	-entry
+*/
+
 void print_numbers(void)
 {
-char c = '0';
+char item;
 
-while (c <= '9')
-{
-_putchar(c);
-c++;
-}
+for (item = '0'; item <= '9'; item++)
+_putchar(item);
+
 _putchar('\n');
-}
