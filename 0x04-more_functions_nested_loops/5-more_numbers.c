@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include <stdio.h>
+#include "main.h"
 
 /**
 * more_numbers - Print 10 times the numbers since 0 up to 14
@@ -21,5 +22,5 @@ _putchar((y / 10) + '0');
 _putchar((y % 10) + '0');
 }
 
-_putchar('\n');
+_putchar(10);
 }
