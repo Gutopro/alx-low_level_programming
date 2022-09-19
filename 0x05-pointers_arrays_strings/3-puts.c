@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
-* _puts -	Writes a string to stdout
-* @str:		The string to be written
-* Return:	Nothing
+* _puts - a function that prints a string
+* @str: string input
+* Return: string
 */
-
 void _puts(char *str)
 {
-int length;
+int i;
 
-length = _strlen(str);
-
-write(1, str, length);
-putchar('\n');
+for (i = 0; str[i] != '\0'; i++)
+{
+_putchar(str[i]);
+}
+_putchar('\n');
 }
