@@ -13,5 +13,5 @@ int length;
 length = _strlen(str);
 
 write(1, str, length);
-_putchar('\n');
+putchar('\n');
 }
