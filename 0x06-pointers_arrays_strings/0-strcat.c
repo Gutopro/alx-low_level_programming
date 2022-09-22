@@ -1,26 +1,27 @@
 #include "main.h"
 
 /**
-*_strcat- a function that copies
-*@dest: parameter 1
-*@src: parameter 2
-* Return : a string
+*_strcat-concatenate 2 strings
+*@dest: first string.
+*@src: second string.
+*Return: string.
 */
 
 char *_strcat(char *dest, char *src)
-
 {
-int len = 0, i;
- 
-while (dest[len])
-len++;
+int i = 0, j = 0;
 
-for (i = 0; src[i] != 0; i++)
+while (dest[i] != '\0')
+i++;
+
+while (src[j] != '\0')
 {
-dest[len] = src[i];
-len += 1;
+dest[i] = src[j];
+i++;
+j++;
 }
 
-dest[len] = '\0';
+dest[i] = '\0';
+
 return (dest);
 }
