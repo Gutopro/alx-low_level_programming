@@ -1,32 +1,32 @@
 #include "main.h"
+
 /**
-*rot13 - encoding a string using rot13.
-*@s: the string to be encoded to rot13.
-*Return: the string s encoded to rot13.
+* rot13 - Entry point
+* ONE if, TWO loops only...
+* @n: input
+* Return: decrypted string
 */
-
-char *rot13(char *s)
+char *rot13(char *n)
 {
-int i = 0, j = 0;
+int x, rot_c = 13, i = 0;
+char toswap[] = {'A', 'N', 'a', 'n', 'B', 'O', 'b', 'o', 'C', 'P',
+'c', 'p', 'D', 'Q', 'd', 'q', 'E', 'R', 'e', 'r', 'F', 'S', 'f',
+'s', 'G', 'T', 'g', 't', 'H', 'U', 'h', 'u', 'I', 'V', 'i', 'v',
+'J', 'W', 'j', 'w', 'K', 'X', 'k', 'x', 'L', 'Y', 'l', 'y', 'M',
+'Z', 'm', 'z'};
 
-char string_rot13[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
-
-char string_alpha[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-
-while (s[i] != '\0')
+while (n[i] != '\0')
 {
-do{
-if (s[i] == string_alpha[j])
+for (x = 0; x <= 51; x++)
 {
-s[i] = string_rot13[j];
-break;
+if (n[i] == toswap[x])
+{
+n[i] = n[i] + rot_c;
+x = 51;
 }
-j++;
+rot_c = rot_c * -1;
 }
-while (string_alpha[j] != '\0');
-}
-j = 0;
 i++;
-
-return (s);
+}
+return (n);
 }
