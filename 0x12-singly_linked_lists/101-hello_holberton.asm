@@ -1,15 +1,15 @@
-section .data
+	global main
+	section .text
 
-    message db "Hello, Holberton", 10
+main:
+	mov rdi, 1		;to the standard output
+	mov rsi, message	;message to print
+	mov rdx, 17     	;size of text to print
+	mov rax, 1		;write
+	syscall
 
-section .text
-
-global _start
-_start:
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, message
-    mov rdx, 14
-    syscall
-
-
+	mov eax, 60
+	xor rdi, rdi
+	syscall
+message:
+	db "Hello, Holberton", 10
