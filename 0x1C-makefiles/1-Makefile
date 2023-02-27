@@ -1,7 +1,7 @@
 CC=gcc
-SRC=main.c functions.c
+SRC=main.c school.c
 
-school: $(SRC)
+all: $(SRC)
 	$(CC) -o school $(SRC)
 
-all: school
+
